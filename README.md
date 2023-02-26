@@ -8,8 +8,6 @@
 
 * either way you should be able to find the website works: http://localhost:8080/possible_genres, then get recommendations from http://localhost:8080/[genre] with any genre you recognized from the [list](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/README.md#appendix-possible-genres-from-spotify-api-as-of-feb-20-2023) (e.g. http://localhost:8080/work-out)
 
-(Possible genres can be found at the bottom of this file).
-
 * 3. Example output
 ```text
 Rock House Boogie by John Lee Hooker
@@ -35,8 +33,7 @@ The Lady Is A Tramp - from the Hootenanny 2008 by Jools Holland & Lily Rose Coop
 ```
 
 ## Steps and instructions
-### 1. Start with a rust cli 
-[program](https://github.com/nogibjj/music-reco-rust-cli-with-spotify-api/tree/main).  
+### 1. Start with a rust cli [program](https://github.com/nogibjj/music-reco-rust-cli-with-spotify-api/tree/main).  
 * 1. Develop and run the program locally
 ```bash
 make format-check
