@@ -1,5 +1,5 @@
 [package]
-name = "minikube-service-proj2-mw515"
+name = "minikubemusicreco"
 version = "0.1.0"
 edition = "2021"
 
