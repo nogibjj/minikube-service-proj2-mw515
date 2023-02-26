@@ -6,7 +6,7 @@ rust-version:
 	rustup --version			#rust toolchain manager
 	clippy-driver --version		#rust linter
 
-format:
+format-check:
 	cargo fmt --quiet
 
 lint:
@@ -15,11 +15,13 @@ lint:
 test:
 	cargo test --quiet
 
+
+build-release:
+	cargo build --release
+	
 run:
 	cargo run
 
-release:
-	cargo build --release
 
 build:
 	docker build -t musicreco .

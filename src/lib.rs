@@ -8,7 +8,6 @@ pub struct AccessTokenResponse {
     expires_in: u32,
 }
 
-
 #[derive(Debug, Deserialize, Serialize)]
 pub struct RecommendationResponse {
     tracks: Vec<Track>,
@@ -34,25 +33,27 @@ pub async fn get_access_token(
     client_id: &str,
     client_secret: &str,
 ) -> Result<String, Box<dyn std::error::Error>> {
-    let client = reqwest::Client::builder().danger_accept_invalid_certs(true).build()?; //reqwest::Client::new();
+    let client = reqwest::Client::builder()
+        .danger_accept_invalid_certs(true)
+        .build()?; //reqwest::Client::new();
     let body = "grant_type=client_credentials";
     let basic_auth = general_purpose::STANDARD.encode(format!("{}:{}", client_id, client_secret));
 
     let response = client
-    .post("https://accounts.spotify.com/api/token")
-    .header(
-        reqwest::header::AUTHORIZATION,
-        format!("Basic {}", basic_auth),
-    )
-    .header(
-        reqwest::header::CONTENT_TYPE,
-        "application/x-www-form-urlencoded",
-    )
-    .body(body)
-    .send()
-    .await?
-    .json::<AccessTokenResponse>()
-    .await?;
+        .post("https://accounts.spotify.com/api/token")
+        .header(
+            reqwest::header::AUTHORIZATION,
+            format!("Basic {}", basic_auth),
+        )
+        .header(
+            reqwest::header::CONTENT_TYPE,
+            "application/x-www-form-urlencoded",
+        )
+        .body(body)
+        .send()
+        .await?
+        .json::<AccessTokenResponse>()
+        .await?;
 
     Ok(response.access_token)
 }
@@ -80,11 +81,13 @@ pub async fn get_recommendations(
     Ok(response.tracks)
 }
 
-
 // write a method to request recommendations based on a genre
 // return a list of recommendations formatted as a string
 // e.g. "Track 1 by Artist 1, Track 2 by Artist 2, ..."
-pub async fn get_recommendations_based_on_genre(access_token_data: String, genre: &str) -> Result<String, reqwest::Error> {
+pub async fn get_recommendations_based_on_genre(
+    access_token_data: String,
+    genre: &str,
+) -> Result<String, reqwest::Error> {
     let access_token = &access_token_data;
     // print out the recommendations for the genre "dance"
     // TODO: make this a parameter
@@ -101,11 +104,10 @@ pub async fn get_recommendations_based_on_genre(access_token_data: String, genre
     Ok(recommendations_string)
 }
 
-
 // write an async method to request all possible genres with spotify api
 // return a list of genres formatted as a string
 // e.g. "genre 1, genre 2, ..."
-pub async fn get_possible_genres(access_token_data: String) -> Result<String, reqwest::Error>{
+pub async fn get_possible_genres(access_token_data: String) -> Result<String, reqwest::Error> {
     let client = reqwest::Client::new();
     let mut headers = reqwest::header::HeaderMap::new();
     headers.insert(
@@ -123,7 +125,3 @@ pub async fn get_possible_genres(access_token_data: String) -> Result<String, re
 
     Ok(response.genres.join(", "))
 }
-
-
-
-
