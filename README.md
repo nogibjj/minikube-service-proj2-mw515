@@ -2,27 +2,17 @@
 
 
 ## Usages
+* 0. Obtain a "client id" and a "client secret" from [Spotify developer website](https://developer.spotify.com/dashboard/applications) and substitute them in the [code](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/src/main.rs#L58). 
+
 * 1. Run `make run` to make it run locally 
 
-* 2. Run `make pullimageandruncontainer` to pull a ready docker image and launch it (make sure you have Docker install properly and have it started)
+* 2. Run `make run-pulled-image` to pull a ready docker image and launch it (make sure you have Docker install properly and have it started)
 
 * either way you should be able to find the website works: http://localhost:8080/possible-genres, then get recommendations with any genre you recognized from the list http://localhost:8080/[genre] (e.g. http://localhost:8080/work-out)
 
-## Spotify API 
-### 1. Obtain a "client id" and a "client secret" from [Spotify developer website](https://developer.spotify.com/dashboard/applications)
-
-- Learn ways to [generate the access token](https://github.com/mianwu515/rust-world-spr23/tree/main/music-recommendation-service-with-spotify-api#steps) with the client_id and client_secret
-
-### 2. Run the CLI tool with your ready client_id and client_secret
-`cargo run --bin spotify -- music --genre [NAME of the GENRE] --id [YOUR ACCOUNT ID] --secret [YOUR ACCOUNT SECRET]`
-
-Notice `cargo run --bin [package name]` runs at the top level of the repo.
-
-For example, `cargo run --bin spotify -- music --genre acoustic --id 123456xxx --secret abcdefxxx`
-
 Possible genres can be found below.
 
-### 3. Example output
+* 3. Example output
 ```text
 Rock House Boogie by John Lee Hooker
 Nobody Knows You When You're Down and Out - 78rpm Version by Bessie Smith
@@ -46,7 +36,7 @@ The Lady Is A Tramp - from the Hootenanny 2008 by Jools Holland & Lily Rose Coop
 'Tain't Nobody's Bizness If I Do by Bessie Smith
 ```
 
-### 4. Possible genres from Spotify API as of Feb 20, 2023
+* 4. Possible genres from Spotify API as of Feb 20, 2023
 ```bash
 {
   "genres": [
@@ -179,7 +169,6 @@ The Lady Is A Tramp - from the Hootenanny 2008 by Jools Holland & Lily Rose Coop
   ]
 }
 ```
-
 
 ## How
 * 0. Start with a rust cli 

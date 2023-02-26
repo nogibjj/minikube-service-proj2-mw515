@@ -9,11 +9,10 @@ C. GET /<genre>
 D. GET /<other>
 */
 
-
 use actix_web::{get, web, App, HttpResponse, HttpServer, Responder};
-use minikubemusicreco::get_recommendations_based_on_genre;
-use minikubemusicreco::get_possible_genres;
-use minikubemusicreco::get_access_token;
+use musicreco::get_recommendations_based_on_genre;
+use musicreco::get_possible_genres;
+use musicreco::get_access_token;
 
 #[get("/")]
 async fn index() -> impl Responder {
@@ -55,7 +54,8 @@ async fn recommend(access_token_data: web::Data<String>, genre: web::Path<String
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let access_token = get_access_token("369dbd7452cf4e5fac093191ef5e6538", "12125765ddf14ff086d8b3252969f7a6").await.unwrap();
+    // TODO
+    let access_token = get_access_token("CLIENT ID", "CLIENT SECRET").await.unwrap();
     let access_token_data = web::Data::new(access_token.clone());
      HttpServer::new(move || {
         App::new()

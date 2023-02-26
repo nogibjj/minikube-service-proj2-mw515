@@ -34,7 +34,7 @@ pub async fn get_access_token(
     client_id: &str,
     client_secret: &str,
 ) -> Result<String, Box<dyn std::error::Error>> {
-    let client = reqwest::Client::new();
+    let client = reqwest::Client::builder().danger_accept_invalid_certs(true).build()?; //reqwest::Client::new();
     let body = "grant_type=client_credentials";
     let basic_auth = general_purpose::STANDARD.encode(format!("{}:{}", client_id, client_secret));
 
