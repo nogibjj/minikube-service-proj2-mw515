@@ -231,5 +231,4 @@ I developed the app on both AWS Cloud9 and Terminal on MAC with an Intel chip, w
 * [webdocker-github-code-example](https://github.com/nogibjj/rust-mlops-template/tree/main/webdocker)
 * [install-docker-on-debian](https://www.fosslinux.com/49959/install-docker-on-debian.html)
 * [create-docker-image-pull/push-image](https://www.pluralsight.com/guides/create-docker-images-docker-hub)
-
-
+* [containerized-rock-paper-scissors-actix-microservice](https://github.com/nogibjj/rust-world-spr23/tree/main/actix-containerized-microservice-wk3/actixdocker)
