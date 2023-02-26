@@ -22,7 +22,6 @@ build-release:
 run:
 	cargo run
 
-
 build:
 	docker build -t musicreco .
 

@@ -2,15 +2,13 @@
 
 
 ## Usages
-* 0. Obtain a "client id" and a "client secret" from [Spotify developer website](https://developer.spotify.com/dashboard/applications) and substitute them in the [code](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/src/main.rs#L58). 
+* Choice#1: Obtain a "client id" and a "client secret" from [Spotify developer website](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/src/main.rs#L65) and run `make run` to make it deployed to localhost 
 
-* 1. Run `make run` to make it run locally 
+* Choice#2: Run `make run-pulled-image` to pull a ready docker image and launch it (make sure you have Docker install properly and have it started)
 
-* 2. Run `make run-pulled-image` to pull a ready docker image and launch it (make sure you have Docker install properly and have it started)
+* either way you should be able to find the website works: http://localhost:8080/possible_genres, then get recommendations with any genre you recognized from the list http://localhost:8080/[genre] (e.g. http://localhost:8080/work-out)
 
-* either way you should be able to find the website works: http://localhost:8080/possible-genres, then get recommendations with any genre you recognized from the list http://localhost:8080/[genre] (e.g. http://localhost:8080/work-out)
-
-Possible genres can be found below.
+(Possible genres can be found at the bottom of this file).
 
 * 3. Example output
 ```text
@@ -36,19 +34,18 @@ The Lady Is A Tramp - from the Hootenanny 2008 by Jools Holland & Lily Rose Coop
 'Tain't Nobody's Bizness If I Do by Bessie Smith
 ```
 
-## Steps and Instructions
+## Steps and instructions
 ### 1. Start with a rust cli 
 [program](https://github.com/nogibjj/music-reco-rust-cli-with-spotify-api/tree/main).  
-* 1. To make your app locally deployed
+* 1. Develop and run the program locally
 ```bash
 make format-check
 make lint
 make run
 make build-release
 ```
-After this, you should be able to launch your localhost web service! go to http://localhost:8080/work-out
 
-### 2. To containerize your app and launch a docker container
+### 2. To containerize your app and launch a docker container. See [here](https://www.pluralsight.com/guides/create-docker-images-docker-hub)
 
 #### 2.1 To push an image to DockerHub, you could follow these steps:
 * `docker login` and enter your docker "user_name" and "user_secret" as prompted
@@ -63,7 +60,7 @@ After this, you should be able to launch your localhost web service! go to http:
   * run `make run-docker`
 
 ### 3. Deploy to a minikube cluster with minikube ctl (command line tool) 
-  * install minikube ctl [here](https://minikube.sigs.k8s.io/docs/start/)
+  * install minikube ctl. See [here](https://minikube.sigs.k8s.io/docs/start/)
   * start minikube service:
     * `minikube start`
     * make an alias
