@@ -6,7 +6,7 @@
 
 * Choice#2: Run `make run-pulled-image` to pull a ready docker image and launch it (make sure you have Docker install properly and have it started)
 
-* either way you should be able to find the website works: http://localhost:8080/possible_genres, then get recommendations with any genre you recognized from the list http://localhost:8080/[genre] (e.g. http://localhost:8080/work-out)
+* either way you should be able to find the website works: http://localhost:8080/possible_genres, then get recommendations with any genre you recognized from the [list](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/README.md#appendix-possible-genres-from-spotify-api-as-of-feb-20-2023) http://localhost:8080/[genre] (e.g. http://localhost:8080/work-out)
 
 (Possible genres can be found at the bottom of this file).
 
