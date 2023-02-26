@@ -2,7 +2,7 @@
 
 
 ## Usages
-* Choice#1: Obtain a "client id" and a "client secret" from [Spotify developer website](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/src/main.rs#L65) and run `make run` to make it deployed to localhost 
+* Choice#1: Obtain a "client id" and a "client secret" from [Spotify developer website](https://developer.spotify.com/dashboard/login), substitute them [here](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/src/main.rs#L65), and run `make run` to make it deployed to localhost 
 
 * Choice#2: Run `make run-pulled-image` to pull a ready docker image and launch it (make sure you have Docker install properly and have it started)
 
