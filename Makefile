@@ -21,4 +21,14 @@ run:
 release:
 	cargo build --release
 
+build:
+	docker build -t musicreco .
+
+run-docker:
+	docker run -it --rm -p 8080:8080 musicreco
+
+run-pulled-image:
+	docker pull mianwu/musicreco:latest
+	docker run -it --rm -p 8080:8080 mianwu/musicreco:latest
+
 all: format lint test run
