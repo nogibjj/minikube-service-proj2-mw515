@@ -1,19 +1,5 @@
-# rust-new-project-template
-A good starting point for a new Rust project
+# A music recommendation service using Rust Actix with Spotify Developer API (deployed with minikube)
 
-## References
-* [rust-cli-template](https://github.com/kbknapp/rust-cli-template)
-* [a-rust-mini-kube-project-from-wanqian](https://github.com/nogibjj/Project2-Wanqian)
-* [minikube-doc](https://minikube.sigs.k8s.io/docs/start/)
-* [an-example-kubernetes-project-from-nogibjj](https://github.com/nogibjj/coursera-applied-de-kubernetes-lab)
-* [an-example-hello-minikube](https://kubernetes.io/docs/tutorials/hello-minikube/)
-* [webdocker-github-code-example](https://github.com/nogibjj/rust-mlops-template/tree/main/webdocker)
-* [install-docker-on-debian](https://www.fosslinux.com/49959/install-docker-on-debian.html)
-* [create-docker-image-pull/push-image](https://www.pluralsight.com/guides/create-docker-images-docker-hub)
-
-
-
-# A music recommendation cli tool using Rust with Spotify Developer API 
 
 ## Usages
 * 1. Run `make run` to make it run locally 
@@ -246,4 +232,15 @@ If you directly run the codes from this Codespaces, it could not work as I faile
 
 I developed the app on both AWS Cloud9 and Terminal on MAC with an Intel chip, with Docker, Rust and minikube set up correctly.
 
+
 ## References
+* [rust-cli-template](https://github.com/kbknapp/rust-cli-template)
+* [a-rust-mini-kube-project-from-wanqian](https://github.com/nogibjj/Project2-Wanqian)
+* [minikube-doc](https://minikube.sigs.k8s.io/docs/start/)
+* [an-example-kubernetes-project-from-nogibjj](https://github.com/nogibjj/coursera-applied-de-kubernetes-lab)
+* [an-example-hello-minikube](https://kubernetes.io/docs/tutorials/hello-minikube/)
+* [webdocker-github-code-example](https://github.com/nogibjj/rust-mlops-template/tree/main/webdocker)
+* [install-docker-on-debian](https://www.fosslinux.com/49959/install-docker-on-debian.html)
+* [create-docker-image-pull/push-image](https://www.pluralsight.com/guides/create-docker-images-docker-hub)
+
+

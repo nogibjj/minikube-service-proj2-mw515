@@ -8,5 +8,5 @@ RUN cargo build --release
 # runtime stage
 FROM debian:buster-slim
 ENV APP musicreco
-COPY --from=builder /usr/src/$APP/target/release/$APP /usr/local/bin/$App
+COPY --from=builder /usr/src/$APP/target/release/minikubemusicreco /usr/local/bin/$App
 CMD ["musicreco"]
