@@ -48,7 +48,7 @@ make build-release
 * `docker login` and enter your docker "user_name" and "user_secret" as prompted
 * `docker build -t [NAME OF YOUR APP] .`
   * You could just run `make build` for this program
-  * # This is to build an image out of the Dockerfile
+  * Build an image out of the Dockerfile:
   * `docker tag [NAME OF YOUR APP]:latest [YOUR DOCKER USER NAME]/[NAME OF YOUR APP]:latest`
   * `docker push [YOUR DOCKER USER NAME]/[NAME OF YOUR APP]:latest`
     
