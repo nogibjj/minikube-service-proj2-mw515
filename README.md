@@ -76,7 +76,7 @@ make build-release
       * You could also use kubectl to forward the port from 8080 to local 7080
         * `kubectl port-forward service/[NAME OF YOUR APP] 7080:8080`
 
-![minikube launch]("minikubelaunch.png")
+![minikube launch](minikubelaunch.png)
 ## Note
 If you directly run the codes from this Codespaces, it could not work as I failed to install Docker properly in it.
 
