@@ -4,9 +4,9 @@
 ## Usages
 * Choice#1: Obtain a "client id" and a "client secret" from [Spotify developer website](https://developer.spotify.com/dashboard/login), substitute them [here](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/src/main.rs#L65), and run `make run` to make it deployed to localhost 
 
-* Choice#2: Run `make run-pulled-image` to pull a ready docker image and launch it (make sure you have Docker install properly and have it started)
+* Choice#2: Run `make run-pulled-image` to pull a ready docker image and launch it (make sure you have Docker installed properly and have it started)
 
-* either way you should be able to find the website works: http://localhost:8080/possible_genres, then get recommendations from http://localhost:8080/[genre] with any genre you recognized from the [list](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/README.md#appendix-possible-genres-from-spotify-api-as-of-feb-20-2023) (e.g. http://localhost:8080/work-out)
+* either way you should be able to find the website working: http://localhost:8080/possible_genres, then get recommendations from http://localhost:8080/[genre] with any genre you recognized from the [list](https://github.com/nogibjj/minikube-service-proj2-mw515/blob/main/README.md#appendix-possible-genres-from-spotify-api-as-of-feb-20-2023) (e.g. http://localhost:8080/work-out)
 
 * 3. Example output
 ```text
