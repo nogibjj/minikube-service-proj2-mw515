@@ -62,7 +62,7 @@ async fn recommend(
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     // TODO
-    let access_token = get_access_token("CLIENT ID", "CLIENT SECRET")
+    let access_token = get_access_token("369dbd7452cf4e5fac093191ef5e6538", "12125765ddf14ff086d8b3252969f7a6")
         .await
         .unwrap();
     let access_token_data = web::Data::new(access_token.clone());
@@ -75,7 +75,7 @@ async fn main() -> std::io::Result<()> {
             .service(recommend)
         //.service(other)
     })
-    .bind("0.0.0.0:8080")?
+    .bind("0.0.0.0:7070")?
     .run()
     .await
 }
